@@ -27,14 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
         seekBar = findViewById(R.id.seekBar);
         txtTime = findViewById(R.id.txtTime);
-
         btnGo = findViewById(R.id.btnGo);
         seekBar.setMax(MAX_TIME);
         seekBar.setProgress(DEFAULT_TIME);
 
         counterActive = false;
         progressSet = seekBar.getProgress();
-
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -43,15 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 int seconds = progress % 60;
                 txtTime.setText(getString(R.string.show_counter, minutes, seconds));
             }
-
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
-
             }
-
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
-
             }
         });
     }
@@ -77,17 +71,14 @@ public class MainActivity extends AppCompatActivity {
                     resetTimer();
                 }
             };
-
             countDownTimer.start();
             btnGo.setText(getString(R.string.stop_button));
             seekBar.setEnabled(false);
         }
-
        else {
             resetTimer();
             countDownTimer.cancel();
         }
-
     }
 
     private void resetTimer(){
