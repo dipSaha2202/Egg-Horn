@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Egg-Horn</string>
+    <string name="middle_text">00 : 30</string>
+    <string name="content_description">none</string>
+    <string name="go">Go!</string>
+    <string name="show_counter">%1$02d : %2$02d</string>
+    <string name="stop_button">Stop!</string>
+
+</resources>
